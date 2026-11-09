@@ -1,0 +1,51 @@
+{
+  "name": "nexusoms-aws-mvp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "lint:live": "node scripts/lint-live.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "test": "vitest run",
+    "test:ui:login": "node scripts/day6-auth-live-smoke.mjs",
+    "test:ui": "node scripts/day6-auth-live-smoke.mjs && node scripts/day6-orders-ui-smoke.mjs && node scripts/day6-inventory-finance-smoke.mjs && node scripts/day6-role-pages-audit.mjs",
+    "test:ui:orders": "node scripts/day6-orders-ui-smoke.mjs",
+    "test:ui:journals": "node scripts/day6-journals-ui-smoke.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@supabase/supabase-js": "^2.118.0",
+    "@tanstack/react-query": "^5.106.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-is": "^19.3.1",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.6.2",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^15.15.0",
+    "postcss": "^8.5.32",
+    "puppeteer": "^25.16.0",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^7.3.7",
+    "vitest": "^5.0.5"
+  }
+}
