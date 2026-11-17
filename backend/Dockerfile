@@ -23,7 +23,7 @@ RUN dotnet publish src/NexusOMS.Api/NexusOMS.Api.csproj \
     -c Release -o /app/publish --no-restore /p:UseAppHost=false
 
 # ---- Stage 2: runtime (image nhỏ, không có SDK, chạy user thường) ----
-FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:11.0 AS final
 
 # Npgsql cần thư viện GSSAPI/Kerberos khi kết nối PostgreSQL trên Linux.
 USER root
